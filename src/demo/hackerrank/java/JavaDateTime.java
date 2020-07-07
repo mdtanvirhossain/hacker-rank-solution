@@ -10,12 +10,12 @@ public class JavaDateTime {
 	public static void main(String[] args) throws ParseException {
 		Scanner scan = new Scanner(System.in);
 
-		String dd = scan.next();
 		String mm = scan.next();
+		String dd = scan.next();
 		String yyyy = scan.next();
 
 		Integer intdd = Integer.parseInt(dd);
-		intdd = intdd + 1;
+		//intdd = intdd + 1;
 		String strdd = Integer.toString(intdd);
 
 		String fullDate = strdd + "/" + mm + "/" + yyyy;
@@ -23,6 +23,8 @@ public class JavaDateTime {
 		Date newDate = new SimpleDateFormat("dd/MM/yyyy").parse(fullDate);
 		SimpleDateFormat simpleDateformat = new SimpleDateFormat("EEEE");
 		System.out.println(simpleDateformat.format(newDate).toUpperCase());
+
+		scan.close();
 
 	}
 }

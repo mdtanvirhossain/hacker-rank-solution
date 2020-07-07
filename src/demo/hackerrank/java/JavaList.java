@@ -37,6 +37,8 @@ public class JavaList {
 		for (int printList : list) {
 			System.out.print(printList + " ");
 		}
+		
+		scanner.close();
 
 	}
 
