@@ -7,7 +7,21 @@ public class ChocolateFeast {
 	// Complete the chocolateFeast function below.
 	static int chocolateFeast(int n, int c, int m) {
 
-		return 0;
+		int totalNum = n / c;
+
+		int tw = totalNum;
+
+		int remWr = tw % m;
+
+		while (tw >= m) {
+			int newBar = tw / m;
+			totalNum = totalNum + newBar;
+			tw = newBar + remWr;
+			remWr = tw % m;
+		}
+
+		return totalNum;
+
 	}
 
 	private static final Scanner scanner = new Scanner(System.in);
