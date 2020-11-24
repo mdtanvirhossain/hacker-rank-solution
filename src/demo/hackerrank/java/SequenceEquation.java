@@ -7,6 +7,7 @@ public class SequenceEquation {
 	static int[] permutationEquation(int[] p) {
 
 		int pLength = p.length;
+		
 		int[] result = new int[pLength];
 		int resultIndex = 0;
 
