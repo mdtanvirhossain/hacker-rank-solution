@@ -1,4 +1,6 @@
-package demo.hackerrank.java.JavaRegex;
+package demo.hackerrank.java;
+
+import java.util.Scanner;
 
 class MyRegex {
 	// Regex for digit from 0 to 255.
@@ -9,4 +11,18 @@ class MyRegex {
 	// this is the regex to validate an IP address.
 	public String pattern = patternFor0To255 + "\\." + patternFor0To255 + "\\." + patternFor0To255 + "\\."
 			+ patternFor0To255;
+}
+
+class JavaRegex {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		while (in.hasNext()) {
+			String IP = in.next();
+			System.out.println(IP.matches(new MyRegex().pattern));
+		}
+
+		in.close();
+
+	}
 }

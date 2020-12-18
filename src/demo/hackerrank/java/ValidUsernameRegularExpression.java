@@ -1,8 +1,12 @@
-package demo.hackerrank.java.ValidUsernameRegularExpression;
+package demo.hackerrank.java;
 
 import java.util.Scanner;
 
-public class Solution {
+class MyRegexForValidUsername {
+	public static final String regularExpression = "^[a-zA-Z]\\w{7,29}$";
+}
+
+public class ValidUsernameRegularExpression {
 	private static final Scanner scan = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -10,7 +14,7 @@ public class Solution {
 		while (n-- != 0) {
 			String userName = scan.nextLine();
 
-			if (userName.matches(ValidUsernameRegularExpression.regularExpression)) {
+			if (userName.matches(MyRegexForValidUsername.regularExpression)) {
 				System.out.println("Valid");
 			} else {
 				System.out.println("Invalid");
