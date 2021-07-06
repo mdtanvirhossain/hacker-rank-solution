@@ -26,16 +26,19 @@ public class ClosestNumbers {
 
 		List<Integer> resultList = new ArrayList<>();
 
+		// sorting the array
 		Arrays.sort(arr);
 
 		int minDiff = arr[1] - arr[0];
 
+		// find out the min_diff
 		for (int i = 2; i < arr.length; i++) {
 			if (Math.abs((arr[i] - arr[i - 1])) < minDiff) {
 				minDiff = Math.abs(arr[i] - arr[i - 1]);
 			}
 		}
 
+		// find out the pair with min_diff
 		for (int i = 1; i < arr.length; i++) {
 			if (Math.abs((arr[i] - arr[i - 1])) == minDiff) {
 				resultList.add(arr[i - 1]);
